@@ -136,7 +136,7 @@ void Widget::on_pB_start_convert_clicked()
         }
         write_buffer[0] = '\t';
         for(i=0; i<ret; i++) {
-            sprintf(&write_buffer[5*i+1], "0x%02x,", read_buffer[i]);
+            sprintf(&write_buffer[5*i+1], "0x%02x,", (uchar)read_buffer[i]);
         }
 
         //TODO: add line feed mode
